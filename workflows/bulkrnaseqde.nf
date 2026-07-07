@@ -4,6 +4,11 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 include { FASTQC                 } from '../modules/nf-core/fastqc/main'
+include { FASTP                  } from '../modules/nf-core/fastp/main'
+include { SALMON_INDEX           } from '../modules/nf-core/salmon/index/main'
+include { SALMON_QUANT           } from '../modules/nf-core/salmon/quant/main'
+include { CUSTOM_TX2GENE         } from '../modules/nf-core/custom/tx2gene/main'
+include { TXIMETA_TXIMPORT       } from '../modules/nf-core/tximeta/tximport/main'
 include { MULTIQC                } from '../modules/nf-core/multiqc/main'
 include { paramsSummaryMap       } from 'plugin/nf-schema'
 include { paramsSummaryMultiqc   } from '../subworkflows/nf-core/utils_nfcore_pipeline'
@@ -29,11 +34,73 @@ workflow BULKRNASEQDE {
 
     def ch_versions = channel.empty()
     def ch_multiqc_files = channel.empty()
+
     //
-    // MODULE: Run FastQC
+    // Reference channels (value channels so they are reused across all samples)
+    //
+    def ch_transcript_fasta = channel.value(file(params.transcript_fasta))
+    def ch_gtf              = channel.value([ [id: 'gtf'], file(params.gtf) ])
+
+    //
+    // MODULE: FastQC on raw reads
     //
     FASTQC(ch_samplesheet)
     ch_multiqc_files = ch_multiqc_files.mix(FASTQC.out.zip.map{ _meta, file -> file })
+
+    //
+    // MODULE: fastp adapter/quality trimming
+    //
+    FASTP(
+        ch_samplesheet.map { meta, reads -> [ meta, reads, [] ] }, // no adapter fasta
+        false,  // discard_trimmed_pass
+        false,  // save_trimmed_fail
+        false   // save_merged
+    )
+    ch_multiqc_files = ch_multiqc_files.mix(FASTP.out.json.map{ _meta, file -> file })
+
+    //
+    // MODULE: Build Salmon index (once, reused for all samples)
+    //
+    SALMON_INDEX(
+        [],                       // genome_fasta (empty = lightweight, non-decoy index)
+        params.transcript_fasta
+    )
+    def ch_index = SALMON_INDEX.out.index.collect()
+
+    //
+    // MODULE: Salmon quantification per sample
+    //
+    SALMON_QUANT(
+        FASTP.out.reads,
+        ch_index,
+        params.gtf,
+        params.transcript_fasta,
+        false,   // alignment_mode (false = mapping-based)
+        ''       // lib_type ('' lets Salmon auto-detect with -l A)
+    )
+    ch_multiqc_files = ch_multiqc_files.mix(SALMON_QUANT.out.json_info.map{ _meta, file -> file })
+
+    //
+    // MODULE: Build transcript-to-gene map from GTF + collected quant dirs
+    //
+    def ch_quants = SALMON_QUANT.out.results.collect{ _meta, dir -> dir }.map { dirs -> [ [id: 'bulkrnaseqde'], dirs ] }
+
+    CUSTOM_TX2GENE(
+        ch_gtf,
+        ch_quants,
+        'salmon',
+        'gene_id',
+        'gene_name'
+    )
+
+    //
+    // MODULE: tximport - merge per-sample quants into gene-level matrices
+    //
+    TXIMETA_TXIMPORT(
+        ch_quants,
+        CUSTOM_TX2GENE.out.tx2gene,
+        'salmon'
+    )
 
     //
     // Collate and save software versions
