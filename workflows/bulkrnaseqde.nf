@@ -10,6 +10,7 @@ include { SALMON_QUANT           } from '../modules/nf-core/salmon/quant/main'
 include { CUSTOM_TX2GENE         } from '../modules/nf-core/custom/tx2gene/main'
 include { TXIMETA_TXIMPORT       } from '../modules/nf-core/tximeta/tximport/main'
 include { GUNZIP                 } from '../modules/nf-core/gunzip/main'
+include { DESEQ2                 } from '../modules/local/deseq2/main'
 include { MULTIQC                } from '../modules/nf-core/multiqc/main'
 include { paramsSummaryMap       } from 'plugin/nf-schema'
 include { paramsSummaryMultiqc   } from '../subworkflows/nf-core/utils_nfcore_pipeline'
@@ -107,6 +108,14 @@ workflow BULKRNASEQDE {
         ch_quants,
         CUSTOM_TX2GENE.out.tx2gene,
         'salmon'
+    )
+
+    //
+    // MODULE: DESeq2 differential expression + HTML report (local module)
+    //
+    DESEQ2(
+        TXIMETA_TXIMPORT.out.counts_gene,
+        file(params.input)
     )
 
     //
