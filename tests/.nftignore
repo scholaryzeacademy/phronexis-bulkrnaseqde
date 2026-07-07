@@ -22,3 +22,6 @@
 tximeta/*.tsv
 custom/*tx2gene*.tsv
 pipeline_info/*
+
+deseq2/*.png
+deseq2/*.html
