@@ -9,6 +9,7 @@ include { SALMON_INDEX           } from '../modules/nf-core/salmon/index/main'
 include { SALMON_QUANT           } from '../modules/nf-core/salmon/quant/main'
 include { CUSTOM_TX2GENE         } from '../modules/nf-core/custom/tx2gene/main'
 include { TXIMETA_TXIMPORT       } from '../modules/nf-core/tximeta/tximport/main'
+include { GUNZIP                 } from '../modules/nf-core/gunzip/main'
 include { MULTIQC                } from '../modules/nf-core/multiqc/main'
 include { paramsSummaryMap       } from 'plugin/nf-schema'
 include { paramsSummaryMultiqc   } from '../subworkflows/nf-core/utils_nfcore_pipeline'
@@ -39,7 +40,13 @@ workflow BULKRNASEQDE {
     // Reference channels (value channels so they are reused across all samples)
     //
     def ch_transcript_fasta = channel.value(file(params.transcript_fasta))
-    def ch_gtf              = channel.value([ [id: 'gtf'], file(params.gtf) ])
+    def ch_gtf
+    if (params.gtf.toString().endsWith('.gz')) {
+        GUNZIP(channel.value([ [id: 'gtf'], file(params.gtf) ]))
+        ch_gtf = GUNZIP.out.gunzip.first()
+    } else {
+        ch_gtf = channel.value([ [id: 'gtf'], file(params.gtf) ])
+    }
 
     //
     // MODULE: FastQC on raw reads

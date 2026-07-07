@@ -1,0 +1,457 @@
+
+ N E X T F L O W   ~  version 26.04.4
+
+Launching `./main.nf` [sharp_kare] revision: 43413b9cf6
+
+WARN: Unrecognized config option 'validation.defaultIgnoreParams'
+WARN: Unrecognized config option 'validation.monochromeLogs'
+Input/output options
+  input                     : /home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/assets/samplesheet_test.csv
+  outdir                    : results
+
+Reference genome options
+  transcript_fasta          : https://github.com/nf-core/test-datasets/raw/rnaseq/reference/transcriptome.fasta
+  gtf                       : https://github.com/nf-core/test-datasets/raw/rnaseq/reference/genes.gtf.gz
+
+Institutional config options
+  config_profile_name       : Test profile
+  config_profile_description: Minimal test dataset to check pipeline function
+
+Generic options
+  trace_report_suffix       : 2026-07-07_17-48-35
+
+Core Nextflow options
+  runName                   : sharp_kare
+  containerEngine           : docker
+  launchDir                 : /home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde
+  workDir                   : /home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work
+  projectDir                : /home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde
+  userName                  : asraful
+  profile                   : test,docker
+  configFiles               : /home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/nextflow.config
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+------------------------------------------------------
+WARN: Found the following unidentified headers in /home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/assets/samplesheet_test.csv:
+	- condition
+	- strandedness
+
+WARN: The operator `first` is useless when applied to a value channel which returns a single value by definition
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC -
+
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP       -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC       -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP        -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT -
+
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP           -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC           -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP            -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT -
+
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP           -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC           -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP            -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC          -
+
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP           [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC           -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP            -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC          -
+
+executor >  local (1)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz) [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC                -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP                 -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE        -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT      -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC               -
+
+executor >  local (1)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz) [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC                [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP                 -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE        -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT      -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC               -
+
+executor >  local (1)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz) [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC                [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP                 [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE        -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT      -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC               -
+
+executor >  local (1)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz) [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC                [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP                 [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX          [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE        -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT      -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC               -
+
+executor >  local (1)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz) [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC                [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP                 [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX          [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE        -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT      -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC               -
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357076_1.fastq.gz
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357070_1.fastq.gz
+
+executor >  local (2)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz) [  0%] 0 of 1
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0a/9bed0ca1e95a2ad5c0a2cfc4df6c7c0a/9bed0c] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP2)      [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP                 [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX          [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE        -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT      -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC               -
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357076_1.fastq.gz
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357070_1.fastq.gz
+
+executor >  local (2)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz) [  0%] 0 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0a/9bed0ca1e95a2ad5c0a2cfc4df6c7c0a/9bed0c] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP2)      [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP                 [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX          [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE        -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT      -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC               -
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357076_1.fastq.gz
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357070_1.fastq.gz
+
+executor >  local (2)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0a/9bed0ca1e95a2ad5c0a2cfc4df6c7c0a/9bed0c] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP2)      [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP                 [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX          [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE        -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT      -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC               -
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357076_1.fastq.gz
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357070_1.fastq.gz
+
+executor >  local (2)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0a/9bed0ca1e95a2ad5c0a2cfc4df6c7c0a/9bed0c] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP2)      [  0%] 0 of 2
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP                 [  0%] 0 of 2
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX          [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE        -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT      -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC               -
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357076_1.fastq.gz
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357070_1.fastq.gz
+
+executor >  local (2)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0a/9bed0ca1e95a2ad5c0a2cfc4df6c7c0a/9bed0c] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP2)      [  0%] 0 of 3
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP                 [  0%] 0 of 2
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX          [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE        -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT      -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC               -
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357076_1.fastq.gz
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357070_1.fastq.gz
+
+executor >  local (2)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0a/9bed0ca1e95a2ad5c0a2cfc4df6c7c0a/9bed0c] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP2)      [  0%] 0 of 3
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP                 [  0%] 0 of 3
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX          [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE        -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT      -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC               -
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357076_1.fastq.gz
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357070_1.fastq.gz
+
+executor >  local (3)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0a/9bed0ca1e95a2ad5c0a2cfc4df6c7c0a/9bed0c] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP2)      [ 33%] 1 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/d4/6b794d77c4d7e09f302ce4cdf8c994d4/6b794d] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (WT_REP2)       [  0%] 0 of 3
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX          [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT          -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE        -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT      -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC               -
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357076_1.fastq.gz
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357070_1.fastq.gz
+
+executor >  local (4)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0a/9bed0ca1e95a2ad5c0a2cfc4df6c7c0a/9bed0c] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP2)                   [ 33%] 1 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/d4/6b794d77c4d7e09f302ce4cdf8c994d4/6b794d] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (WT_REP2)                    [  0%] 0 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT                       -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357076_1.fastq.gz
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357070_1.fastq.gz
+
+executor >  local (4)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0a/9bed0ca1e95a2ad5c0a2cfc4df6c7c0a/9bed0c] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP2)                   [ 33%] 1 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/d4/6b794d77c4d7e09f302ce4cdf8c994d4/6b794d] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (WT_REP2)                    [ 33%] 1 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT                       -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357076_1.fastq.gz
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357070_1.fastq.gz
+
+executor >  local (5)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0a/9bed0ca1e95a2ad5c0a2cfc4df6c7c0a/9bed0c] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP2)                   [ 33%] 1 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/f1/9083815e2471820453177816f4f5d5f1/908381] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (WT_REP1)                    [ 33%] 1 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT                       -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357076_1.fastq.gz
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357070_1.fastq.gz
+
+executor >  local (5)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0a/9bed0ca1e95a2ad5c0a2cfc4df6c7c0a/9bed0c] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP2)                   [ 33%] 1 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/f1/9083815e2471820453177816f4f5d5f1/908381] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (WT_REP1)                    [ 33%] 1 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT                       [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357076_1.fastq.gz
+Staging foreign file: https://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/testdata/GSE110004/SRR6357070_1.fastq.gz
+
+executor >  local (6)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/08/85919364145860ed050af800e271a208/859193] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP1)                   [ 33%] 1 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/f1/9083815e2471820453177816f4f5d5f1/908381] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (WT_REP1)                    [ 66%] 2 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT                       [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+
+
+executor >  local (6)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/08/85919364145860ed050af800e271a208/859193] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP1)                   [ 33%] 1 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/f1/9083815e2471820453177816f4f5d5f1/908381] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (WT_REP1)                    [ 66%] 2 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT                       [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+
+
+executor >  local (6)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/08/85919364145860ed050af800e271a208/859193] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP1)                   [ 33%] 1 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/f1/9083815e2471820453177816f4f5d5f1/908381] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (WT_REP1)                    [ 66%] 2 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT                       [  0%] 0 of 2
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (7)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/08/85919364145860ed050af800e271a208/859193] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (WT_REP1)                   [ 66%] 2 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/f1/9083815e2471820453177816f4f5d5f1/908381] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (WT_REP1)                    [ 66%] 2 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT                       [  0%] 0 of 2
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (8)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [ 66%] 2 of 3
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT                       [  0%] 0 of 2
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (9)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/a1/6edaeca29e565784b7c0b06c194657a1/6edaec] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (WT_REP2)             [  0%] 0 of 2
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (9)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/a1/6edaeca29e565784b7c0b06c194657a1/6edaec] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (WT_REP2)             [  0%] 0 of 2
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (9)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/a1/6edaeca29e565784b7c0b06c194657a1/6edaec] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (WT_REP2)             [  0%] 0 of 3
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (10)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/a1/6edaeca29e565784b7c0b06c194657a1/6edaec] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (WT_REP2)             [ 33%] 1 of 3
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (11)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/46/d7d5ad94d7a3b22be242b0d2ed3ef646/d7d5ad] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (RAP1_IAA_30M_REP1)   [ 33%] 1 of 3
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (11)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/b5/2492ddb0aaf3cefcd1052fc46b50c0b5/2492dd] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (WT_REP1)             [ 66%] 2 of 3
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (11)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/46/d7d5ad94d7a3b22be242b0d2ed3ef646/d7d5ad] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (RAP1_IAA_30M_REP1)   [100%] 3 of 3 ✔
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE                     -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (12)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/46/d7d5ad94d7a3b22be242b0d2ed3ef646/d7d5ad] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (RAP1_IAA_30M_REP1)   [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8b/6553cb1e6332d61f6fd47a440f17b38b/6553cb] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE (gtf)               [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT                   -
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (13)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/46/d7d5ad94d7a3b22be242b0d2ed3ef646/d7d5ad] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (RAP1_IAA_30M_REP1)   [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8b/6553cb1e6332d61f6fd47a440f17b38b/6553cb] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE (gtf)               [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8a/ef0d7debf1314091474b98eef36b098a/ef0d7d] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT (bulkrnaseqde)    [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (13)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/46/d7d5ad94d7a3b22be242b0d2ed3ef646/d7d5ad] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (RAP1_IAA_30M_REP1)   [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8b/6553cb1e6332d61f6fd47a440f17b38b/6553cb] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE (gtf)               [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8a/ef0d7debf1314091474b98eef36b098a/ef0d7d] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT (bulkrnaseqde)    [  0%] 0 of 1
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (13)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/46/d7d5ad94d7a3b22be242b0d2ed3ef646/d7d5ad] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (RAP1_IAA_30M_REP1)   [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8b/6553cb1e6332d61f6fd47a440f17b38b/6553cb] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE (gtf)               [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8a/ef0d7debf1314091474b98eef36b098a/ef0d7d] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT (bulkrnaseqde)    [100%] 1 of 1 ✔
+[-        ] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC                            -
+
+executor >  local (14)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/46/d7d5ad94d7a3b22be242b0d2ed3ef646/d7d5ad] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (RAP1_IAA_30M_REP1)   [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8b/6553cb1e6332d61f6fd47a440f17b38b/6553cb] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE (gtf)               [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8a/ef0d7debf1314091474b98eef36b098a/ef0d7d] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT (bulkrnaseqde)    [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8b/45a95e12ddaa633a8ac65dac9d6cd08b/45a95e] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC (bulkrnaseqde)             [  0%] 0 of 1
+
+executor >  local (14)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/46/d7d5ad94d7a3b22be242b0d2ed3ef646/d7d5ad] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (RAP1_IAA_30M_REP1)   [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8b/6553cb1e6332d61f6fd47a440f17b38b/6553cb] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE (gtf)               [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8a/ef0d7debf1314091474b98eef36b098a/ef0d7d] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT (bulkrnaseqde)    [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8b/45a95e12ddaa633a8ac65dac9d6cd08b/45a95e] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC (bulkrnaseqde)             [100%] 1 of 1 ✔
+-[phronexis/bulkrnaseqde] Pipeline completed successfully-
+
+executor >  local (14)
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/66/1d3b1f023599a11f758e452a0dafd066/1d3b1f] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:GUNZIP (genes.gtf.gz)              [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/47/83ba5bd221561c8c55755332ab84a947/83ba5b] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTQC (RAP1_IAA_30M_REP1)         [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/0f/9dbeb81be2feb15dd0ae5043c43c0b0f/9dbeb8] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:FASTP (RAP1_IAA_30M_REP1)          [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/6a/df99462480b12b194556a81b08fbb36a/df9946] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_INDEX (transcriptome.fasta) [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/46/d7d5ad94d7a3b22be242b0d2ed3ef646/d7d5ad] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:SALMON_QUANT (RAP1_IAA_30M_REP1)   [100%] 3 of 3 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8b/6553cb1e6332d61f6fd47a440f17b38b/6553cb] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:CUSTOM_TX2GENE (gtf)               [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8a/ef0d7debf1314091474b98eef36b098a/ef0d7d] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:TXIMETA_TXIMPORT (bulkrnaseqde)    [100%] 1 of 1 ✔
+[]8;;file:///home/asraful/Documents/Phronexis/Projects/rna_seq/phronexis-bulkrnaseqde/work/8b/45a95e12ddaa633a8ac65dac9d6cd08b/45a95e] process > PHRONEXIS_BULKRNASEQDE:BULKRNASEQDE:MULTIQC (bulkrnaseqde)             [100%] 1 of 1 ✔
+-[phronexis/bulkrnaseqde] Pipeline completed successfully-
+Completed at: 07-Jul-2026 17:52:02
+Duration    : 3m 22s
+CPU hours   : 0.1
+Succeeded   : 14
