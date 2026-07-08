@@ -13,3 +13,5 @@ run.log
 .nf-test/
 .nf-test.log
 deseq_run.log
+
+nf-*-reports.tsv
