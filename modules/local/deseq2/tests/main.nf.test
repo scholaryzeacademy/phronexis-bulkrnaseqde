@@ -27,7 +27,11 @@ nextflow_process {
                 { assert path(process.out.pca[0][1]).exists() },
                 { assert path(process.out.volcano[0][1]).exists() },
                 { assert snapshot(
-                    process.out.results,
+                    // Snapshot only the stable filename + versions, NOT the results
+                    // file content: DESeq2's floating-point output is not byte-identical
+                    // across environments (BLAS/LAPACK differences), even with a
+                    // digest-pinned container. We assert the file EXISTS above.
+                    file(process.out.results[0][1]).name,
                     process.out.versions
                 ).match() }
             )
