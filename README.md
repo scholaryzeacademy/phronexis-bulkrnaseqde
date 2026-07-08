@@ -1,7 +1,7 @@
 # phronexis/bulkrnaseqde
 
-[![GitHub Actions CI Status](https://github.com/scholaryzeacademy/phronexis-bulkrnaseqde/actions/workflows/nf-test.yml/badge.svg)](https://github.com/scholaryzeacademy/phronexis-bulkrnaseqde/actions/workflows/nf-test.yml)
-[![GitHub Actions Linting Status](https://github.com/scholaryzeacademy/phronexis-bulkrnaseqde/actions/workflows/linting.yml/badge.svg)](https://github.com/scholaryzeacademy/phronexis-bulkrnaseqde/actions/workflows/linting.yml)
+[![GitHub Actions CI Status](https://github.com/phronexisbio/phronexis-bulkrnaseqde/actions/workflows/nf-test.yml/badge.svg)](https://github.com/phronexisbio/phronexis-bulkrnaseqde/actions/workflows/nf-test.yml)
+[![GitHub Actions Linting Status](https://github.com/phronexisbio/phronexis-bulkrnaseqde/actions/workflows/linting.yml/badge.svg)](https://github.com/phronexisbio/phronexis-bulkrnaseqde/actions/workflows/linting.yml)
 [![nf-test](https://img.shields.io/badge/unit_tests-nf--test-337ab7.svg)](https://www.nf-test.com)
 [![Nextflow](https://img.shields.io/badge/version-%E2%89%A525.10.4-green?style=flat&logo=nextflow&logoColor=white&color=%230DC09D)](https://www.nextflow.io/)
 [![nf-core template](https://img.shields.io/badge/nf--core_template-4.0.2-green?style=flat&logo=nfcore&logoColor=white&color=%2324B064)](https://github.com/nf-core/tools/releases/tag/4.0.2)
@@ -14,7 +14,7 @@ A reproducible **bulk RNA-seq pipeline** that takes raw reads from a samplesheet
 
 Its distinct contribution over `nf-core/rnaseq` is the **last mile**: it doesn't stop at a count matrix — it runs DESeq2 and renders a differential-expression report (PCA, volcano, top genes), the step `nf-core/rnaseq` deliberately leaves to the analyst.
 
-> **Note on naming:** the pipeline is branded `phronexis/bulkrnaseqde` (the [Phronexis](https://phronexis.bio) project namespace) and hosted at [`github.com/scholaryzeacademy/phronexis-bulkrnaseqde`](https://github.com/scholaryzeacademy/phronexis-bulkrnaseqde). It is **not** an official nf-core pipeline; it reuses the nf-core template and modules under the Phronexis namespace.
+> **Note on naming:** the pipeline is branded `phronexis/bulkrnaseqde` (the [Phronexis](https://phronexis.bio) project namespace) and hosted at [`github.com/phronexisbio/phronexis-bulkrnaseqde`](https://github.com/phronexisbio/phronexis-bulkrnaseqde). It is **not** an official nf-core pipeline; it reuses the nf-core template and modules under the Phronexis namespace.
 
 ---
 
@@ -70,7 +70,7 @@ Requirements: [Nextflow](https://www.nextflow.io/) ≥ 25.10.4 and [Docker](http
 
 ```bash
 # run the built-in test profile end-to-end on tiny data
-nextflow run scholaryzeacademy/phronexis-bulkrnaseqde \
+nextflow run phronexisbio/phronexis-bulkrnaseqde \
     -profile test,docker \
     --outdir results
 ```
@@ -78,7 +78,7 @@ nextflow run scholaryzeacademy/phronexis-bulkrnaseqde \
 To run on your own data, provide a samplesheet and reference:
 
 ```bash
-nextflow run scholaryzeacademy/phronexis-bulkrnaseqde \
+nextflow run phronexisbio/phronexis-bulkrnaseqde \
     -profile docker \
     --input samplesheet.csv \
     --transcript_fasta transcriptome.fasta \
