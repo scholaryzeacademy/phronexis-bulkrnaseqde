@@ -2,7 +2,7 @@ process DESEQ2 {
     tag "$meta.id"
     label 'process_medium'
 
-    container 'quay.io/biocontainers/bioconductor-deseq2:1.50.2--r45ha27e39d_0'
+    container 'quay.io/biocontainers/bioconductor-deseq2:1.50.2--r45ha27e39d_0@sha256:de4543b77eba3d5b4b774a50bf2539b9adb0ba7451c9d909bf8def4a1b1dd56d'
 
     input:
     tuple val(meta), path(counts)
