@@ -78,6 +78,79 @@
                     "fa_icon": "fas fa-ban",
                     "hidden": true,
                     "default": "s3://ngi-igenomes/igenomes/"
+                },
+                "transcript_fasta": {
+                    "type": "string",
+                    "format": "file-path",
+                    "exists": true,
+                    "mimetype": "text/plain",
+                    "pattern": "^\\S+\\.fn?a(sta)?(\\.gz)?$",
+                    "description": "Path to FASTA transcriptome file used by Salmon for pseudo-alignment.",
+                    "fa_icon": "far fa-file-code"
+                },
+                "gtf": {
+                    "type": "string",
+                    "format": "file-path",
+                    "exists": true,
+                    "mimetype": "text/plain",
+                    "pattern": "^\\S+\\.gtf(\\.gz)?$",
+                    "description": "Path to GTF annotation file, used to build the transcript-to-gene map.",
+                    "fa_icon": "fas fa-code-branch"
+                },
+                "salmon_index": {
+                    "type": "string",
+                    "format": "path",
+                    "exists": true,
+                    "description": "Path to a pre-built Salmon index. If omitted, the index is built from the transcriptome.",
+                    "fa_icon": "fas fa-bezier-curve"
+                }
+            }
+        },
+        "read_trimming_options": {
+            "title": "Read trimming options",
+            "type": "object",
+            "fa_icon": "fas fa-cut",
+            "description": "Options for adapter and quality trimming of raw reads.",
+            "properties": {
+                "trimmer": {
+                    "type": "string",
+                    "default": "fastp",
+                    "enum": ["fastp", "trimgalore"],
+                    "description": "Trimming tool to use.",
+                    "fa_icon": "fas fa-cut"
+                },
+                "extra_fastp_args": {
+                    "type": "string",
+                    "description": "Extra arguments passed to fastp in addition to pipeline defaults.",
+                    "fa_icon": "fas fa-plus"
+                },
+                "save_trimmed": {
+                    "type": "boolean",
+                    "description": "Save the trimmed FastQ files in the results directory.",
+                    "fa_icon": "fas fa-save"
+                },
+                "skip_trimming": {
+                    "type": "boolean",
+                    "description": "Skip the adapter trimming step.",
+                    "fa_icon": "fas fa-forward"
+                }
+            }
+        },
+        "process_skipping_options": {
+            "title": "Process skipping options",
+            "type": "object",
+            "fa_icon": "fas fa-fast-forward",
+            "description": "Options to skip various steps within the workflow.",
+            "properties": {
+                "skip_fastqc": {
+                    "type": "boolean",
+                    "description": "Skip FastQC.",
+                    "fa_icon": "fas fa-forward"
+                },
+                "skip_multiqc": {
+                    "type": "boolean",
+                    "description": "Skip MultiQC.",
+                    "fa_icon": "fas fa-forward"
                 }
             }
         },
@@ -244,6 +317,13 @@
         },
         {
             "$ref": "#/$defs/generic_options"
+        },
+        {
+            "$ref": "#/$defs/read_trimming_options"
+        },
+        {
+            "$ref": "#/$defs/process_skipping_options"
         }
-    ]
+    ],
+    "properties": {}
 }

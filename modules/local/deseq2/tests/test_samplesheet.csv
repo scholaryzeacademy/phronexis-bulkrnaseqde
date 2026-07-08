@@ -1,0 +1,5 @@
+sample,fastq_1,fastq_2,condition,strandedness
+WT_REP1,dummy_R1.fastq.gz,dummy_R2.fastq.gz,WT,reverse
+WT_REP2,dummy_R1.fastq.gz,dummy_R2.fastq.gz,WT,reverse
+RAP1_IAA_30M_REP1,dummy_R1.fastq.gz,dummy_R2.fastq.gz,RAP1,reverse
+RAP1_IAA_30M_REP2,dummy_R1.fastq.gz,dummy_R2.fastq.gz,RAP1,reverse
