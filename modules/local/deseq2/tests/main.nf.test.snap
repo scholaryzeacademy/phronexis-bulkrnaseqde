@@ -1,0 +1,15 @@
+{
+    "deseq2 - yeast WT vs RAP1 counts": {
+        "content": [
+            "test.de_results.tsv",
+            [
+                "versions.yml:md5,7327977ca23e06e04a6f6a43fac93114"
+            ]
+        ],
+        "timestamp": "2026-07-08T10:20:35.926171675",
+        "meta": {
+            "nf-test": "0.9.5",
+            "nextflow": "26.04.4"
+        }
+    }
+}
