@@ -15,3 +15,5 @@ run.log
 deseq_run.log
 
 nf-*-reports.tsv
+
+nf-*-reports.tsv
