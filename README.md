@@ -6,6 +6,7 @@
 [![Nextflow](https://img.shields.io/badge/version-%E2%89%A525.10.4-green?style=flat&logo=nextflow&logoColor=white&color=%230DC09D)](https://www.nextflow.io/)
 [![nf-core template](https://img.shields.io/badge/nf--core_template-4.0.2-green?style=flat&logo=nfcore&logoColor=white&color=%2324B064)](https://github.com/nf-core/tools/releases/tag/4.0.2)
 [![run with docker](https://img.shields.io/badge/run%20with-docker-0db7ed?labelColor=000000&logo=docker)](https://www.docker.com/)
+
 <!-- DOI badge goes here after the Zenodo release is minted:
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX) -->
 
@@ -20,7 +21,8 @@ Its distinct contribution over `nf-core/rnaseq` is the **last mile**: it doesn't
 ## Screencast
 
 <!-- TODO: embed or link the 60-second Seqera Platform launch + report screencast here -->
-*A 60-second walkthrough of a monitored run on Seqera Platform — task graph, digest-pinned containers, and the differential-expression report — is available here: [link].*
+
+_A 60-second walkthrough of a monitored run on Seqera Platform — task graph, digest-pinned containers, and the differential-expression report — is available here: [link]._
 
 ---
 
@@ -98,19 +100,19 @@ The `condition` column is the grouping variable for differential expression and 
 
 ## Outputs
 
-| Path | Description |
-| --- | --- |
-| `multiqc/multiqc_report.html` | Aggregated QC across all samples |
-| `tximeta/*.gene_counts.tsv` | Merged gene-level count matrix |
-| `deseq2/*.de_report.html` | Differential-expression report (PCA, volcano, top genes) |
-| `deseq2/*.de_results.tsv` | Full per-gene DE table (log2FC, p-value, padj) |
-| `pipeline_info/` | Execution reports, software versions, RO-Crate provenance |
+| Path                          | Description                                               |
+| ----------------------------- | --------------------------------------------------------- |
+| `multiqc/multiqc_report.html` | Aggregated QC across all samples                          |
+| `tximeta/*.gene_counts.tsv`   | Merged gene-level count matrix                            |
+| `deseq2/*.de_report.html`     | Differential-expression report (PCA, volcano, top genes)  |
+| `deseq2/*.de_results.tsv`     | Full per-gene DE table (log2FC, p-value, padj)            |
+| `pipeline_info/`              | Execution reports, software versions, RO-Crate provenance |
 
 ---
 
 ## Design decisions
 
-This section documents *why* the pipeline is built the way it is — the tradeoffs behind each choice.
+This section documents _why_ the pipeline is built the way it is — the tradeoffs behind each choice.
 
 ### Salmon (selective alignment) over STAR (spliced alignment)
 
@@ -152,7 +154,7 @@ Reproducibility here is deliberate and, importantly, **honest about its limits**
 - **Tested at two levels.** A pipeline-level nf-test runs the whole workflow on tiny data; a module-level nf-test exercises the DESeq2 module in isolation against a committed count-matrix fixture. Both run in CI across two Nextflow versions.
 - **Provenance is captured.** The nf-core RO-Crate (`ro-crate-metadata.json`) records how each run was configured.
 
-**The honest limit:** snapshot tests assert output **structure and software versions**, not exact numeric content. DESeq2's floating-point results (and Salmon's quantification) are *not* bit-identical across different hardware, even inside an identical, digest-pinned container — because numerical output depends on the host's math libraries (BLAS/LAPACK). Pinning the container guarantees the same *software*, not the same *last-decimal numbers*. Claiming otherwise would be false; the tests are designed around this reality rather than pinned to values that would flake.
+**The honest limit:** snapshot tests assert output **structure and software versions**, not exact numeric content. DESeq2's floating-point results (and Salmon's quantification) are _not_ bit-identical across different hardware, even inside an identical, digest-pinned container — because numerical output depends on the host's math libraries (BLAS/LAPACK). Pinning the container guarantees the same _software_, not the same _last-decimal numbers_. Claiming otherwise would be false; the tests are designed around this reality rather than pinned to values that would flake.
 
 ## Known limitations
 
@@ -185,18 +187,18 @@ A few real problems solved during development, kept here because the debugging i
 
 ## Tech stack
 
-| Concern | Tool |
-| --- | --- |
-| Workflow engine | Nextflow (DSL2, ≥ 25.10.4) |
-| Template | nf-core tools 4.0.2 |
-| Quantification | Salmon 1.10.3 |
-| Trimming | fastp 1.1.0 |
-| QC | FastQC 0.12.1 + MultiQC 1.34 |
-| Gene summarisation | tximeta/tximport 1.20.1 |
-| Differential expression | DESeq2 1.50.2 (digest-pinned) |
-| Testing | nf-test (pipeline + module level) |
-| CI | GitHub Actions (lint + test, 2 Nextflow versions) |
-| Cloud | Seqera Platform |
+| Concern                 | Tool                                              |
+| ----------------------- | ------------------------------------------------- |
+| Workflow engine         | Nextflow (DSL2, ≥ 25.10.4)                        |
+| Template                | nf-core tools 4.0.2                               |
+| Quantification          | Salmon 1.10.3                                     |
+| Trimming                | fastp 1.1.0                                       |
+| QC                      | FastQC 0.12.1 + MultiQC 1.34                      |
+| Gene summarisation      | tximeta/tximport 1.20.1                           |
+| Differential expression | DESeq2 1.50.2 (digest-pinned)                     |
+| Testing                 | nf-test (pipeline + module level)                 |
+| CI                      | GitHub Actions (lint + test, 2 Nextflow versions) |
+| Cloud                   | Seqera Platform                                   |
 
 ## Credits
 
@@ -205,4 +207,5 @@ Developed by **[Phronexis](https://phronexis.bio)**. Built on the [nf-core](http
 ## Citation
 
 <!-- After minting the Zenodo DOI, add: -->
-*If you use this pipeline, please cite it via its Zenodo DOI (added on first release).*
+
+_If you use this pipeline, please cite it via its Zenodo DOI (added on first release)._
