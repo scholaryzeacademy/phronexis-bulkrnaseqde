@@ -7,8 +7,7 @@
 [![nf-core template](https://img.shields.io/badge/nf--core_template-4.0.2-green?style=flat&logo=nfcore&logoColor=white&color=%2324B064)](https://github.com/nf-core/tools/releases/tag/4.0.2)
 [![run with docker](https://img.shields.io/badge/run%20with-docker-0db7ed?labelColor=000000&logo=docker)](https://www.docker.com/)
 
-<!-- DOI badge goes here after the Zenodo release is minted:
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX) -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21258517.svg)](https://doi.org/10.5281/zenodo.21258517)
 
 A reproducible **bulk RNA-seq pipeline** that takes raw reads from a samplesheet through quality control, transcript quantification, and **differential expression**, and delivers a biologist-readable HTML report alongside standard QC. Built on the nf-core template, containerized, snapshot-tested, and launchable on Seqera Platform.
 
@@ -206,6 +205,6 @@ Developed by **[Phronexis](https://phronexis.bio)**. Built on the [nf-core](http
 
 ## Citation
 
-<!-- After minting the Zenodo DOI, add: -->
+If you use this pipeline, please cite it via its Zenodo DOI:
 
-_If you use this pipeline, please cite it via its Zenodo DOI (added on first release)._
+> Phronexis. _phronexis/bulkrnaseqde: Bulk RNA-seq quantification and differential expression_. Zenodo. https://doi.org/10.5281/zenodo.21258517
