@@ -1,5 +1,7 @@
 reports:
-  multiqc_report.html:
-    display: "MultiQC HTML report"
-  samplesheet.csv:
-    display: "Auto-created samplesheet with collated metadata and FASTQ paths"
+  multiqc/multiqc_report.html:
+    display: "MultiQC quality-control report"
+  deseq2/*.de_report.html:
+    display: "DESeq2 differential expression report"
+  pipeline_info/execution_report_*.html:
+    display: "Nextflow execution report"
